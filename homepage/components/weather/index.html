@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .homepage__banner-weather {
+        width: 26.75rem;
+        height: 2.75rem;
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 1.25rem;
+        border-radius: 2.4375rem;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(2px);
+      }
+
+      .homepage__banner-weather .hp__bn-wther-col {
+        display: flex;
+        align-items: center;
+        margin-right: 1.5rem;
+      }
+
+      .homepage__banner-weather .hp__bn-wther-col img {
+        width: 1.25rem;
+        height: 1.25rem;
+        margin-right: 0.5rem;
+      }
+
+      .homepage__banner-weather .hp__bn-wther-col span {
+        color: #262626;
+        font-family: Poppins;
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: 0.00875rem;
+      }
+
+      .homepage__banner-weather #hp__bn-wther-des {
+        text-transform: capitalize;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="homepage__banner-weather">
+      <div class="hp__bn-wther-col">
+        <img
+          src="https://cheers-hostel.okhub.tech/wp-content/uploads/2023/12/local.svg"
+          alt=""
+        />
+        <span>Hanoi City</span>
+      </div>
+
+      <div class="hp__bn-wther-col">
+        <img
+          src="https://cheers-hostel.okhub.tech/wp-content/uploads/2023/12/temp.svg"
+          alt=""
+        />
+        <span id="hp_bn-wther-deg"></span>
+      </div>
+
+      <div class="hp__bn-wther-col">
+        <img
+          src="https://cheers-hostel.okhub.tech/wp-content/uploads/2023/12/local.svg"
+          alt=""
+          id="hp__bn-wther-icon"
+        />
+        <span id="hp__bn-wther-des"></span>
+      </div>
+    </div>
+
+    <script>
+      const weatherUrl =
+        "https://api.openweathermap.org/data/2.5/weather?lat=21.027763&lon=105.834160&appid=b02b408dfbc5209f0b4f1b3d1892e22b&units=metric&lang=en";
+
+      async function getWeatherData() {
+        const res = await fetch(weatherUrl);
+        let data = await res.json();
+
+        const tempMin = Math.ceil(data.main.temp_min);
+        const tempMax = Math.ceil(data.main.temp_max) + 1;
+        const desc = data.weather[0].description;
+        const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+
+        const degHtml = document.getElementById("hp_bn-wther-deg");
+        const iconHtml = document.getElementById("hp__bn-wther-icon");
+        const desHtml = document.getElementById("hp__bn-wther-des");
+
+        degHtml.innerHTML = `${tempMin} - ${tempMax} degree`;
+        iconHtml.src = iconUrl;
+        desHtml.innerHTML = desc;
+      }
+
+      getWeatherData();
+    </script>
+  </body>
+</html>

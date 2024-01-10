@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="homepage__reviews-container">
+      <div class="homepage__reviews-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swiper-slide-info">
+              <img
+                src="/homepage/asset/avatar.jpg"
+                alt=""
+                class="swiper-slide-avatar"
+              />
+              <div class="swiper-slide-name">Camilla</div>
+              <div class="swiper-slide-rating">
+                <img src="/homepage/asset/star.svg" alt="" />
+                <img src="/homepage/asset/star.svg" alt="" />
+                <img src="/homepage/asset/star.svg" alt="" />
+                <img src="/homepage/asset/star.svg" alt="" />
+                <img src="/homepage/asset/star.svg" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide-content">
+              Blown away by our Tanzania safari, I never expected it to be that
+              good — it totally exceeded my expectations and was all hassle
+              free. Our guide was absolutely amazing too. Have re-booked and
+              cannot wait for next year!
+            </div>
+
+            <img
+              src="/homepage/asset/vintageBg.jpg"
+              alt=""
+              class="swiper-overlay"
+            />
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-slide-info">
+              <img
+                src="/homepage/asset/avatar.jpg"
+                alt=""
+                class="swiper-slide-avatar"
+              />
+              <div class="swiper-slide-name">Camilla</div>
+              <div class="swiper-slide-rating">
+                <img src="/homepage/asset/star.svg" alt="" />
+                <img src="/homepage/asset/star.svg" alt="" />
+                <img src="/homepage/asset/star.svg" alt="" />
+                <img src="/homepage/asset/star.svg" alt="" />
+                <img src="/homepage/asset/star.svg" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide-content">
+              Blown away by our Tanzania safari, I never expected it to be that
+              good — it totally exceeded my expectations and was all hassle
+              free. Our guide was absolutely amazing too. Have re-booked and
+              cannot wait for next year!
+            </div>
+
+            <img
+              src="/homepage/asset/vintageBg.jpg"
+              alt=""
+              class="swiper-overlay"
+            />
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-slide-info">
+              <img
+                src="/homepage/asset/avatar.jpg"
+                alt=""
+                class="swiper-slide-avatar"
+              />
+              <div class="swiper-slide-name">Camilla</div>
+              <div class="swiper-slide-rating">
+                <img src="/homepage/asset/star.svg" alt="" />
+                <img src="/homepage/asset/star.svg" alt="" />
+                <img src="/homepage/asset/star.svg" alt="" />
+                <img src="/homepage/asset/star.svg" alt="" />
+                <img src="/homepage/asset/star.svg" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide-content">
+              Blown away by our Tanzania safari, I never expected it to be that
+              good — it totally exceeded my expectations and was all hassle
+              free. Our guide was absolutely amazing too. Have re-booked and
+              cannot wait for next year!
+            </div>
+
+            <img
+              src="/homepage/asset/vintageBg.jpg"
+              alt=""
+              class="swiper-overlay"
+            />
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-slide-info">
+              <img
+                src="/homepage/asset/avatar.jpg"
+                alt=""
+                class="swiper-slide-avatar"
+              />
+              <div class="swiper-slide-name">Camilla</div>
+              <div class="swiper-slide-rating">
+                <img src="/homepage/asset/star.svg" alt="" />
+                <img src="/homepage/asset/star.svg" alt="" />
+                <img src="/homepage/asset/star.svg" alt="" />
+                <img src="/homepage/asset/star.svg" alt="" />
+                <img src="/homepage/asset/star.svg" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide-content">
+              Blown away by our Tanzania safari, I never expected it to be that
+              good — it totally exceeded my expectations and was all hassle
+              free. Our guide was absolutely amazing too. Have re-booked and
+              cannot wait for next year!
+            </div>
+
+            <img
+              src="/homepage/asset/vintageBg.jpg"
+              alt=""
+              class="swiper-overlay"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="homepage__reviews-btn homepage__reviews-prev">
+        <img src="/homepage/asset/prev.svg" alt="" />
+      </div>
+      <div class="homepage__reviews-btn homepage__reviews-next">
+        <img src="/homepage/asset/next.svg" alt="" />
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      let reviewsSw = new Swiper(".homepage__reviews-swiper", {
+        slidesPerView: 1.2,
+        spaceBetween: (window.innerWidth / 100) * 4.26,
+        navigation: {
+          nextEl: ".homepage__reviews-next",
+          prevEl: ".homepage__reviews-prev",
+        },
+        centeredSlides: true,
+
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+            spaceBetween: (window.innerWidth / 100) * 2,
+            centeredSlides: false,
+          },
+          1025: {
+            slidesPerView: 3,
+            spaceBetween: (window.innerWidth / 100) * 1.5,
+            centeredSlides: false,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

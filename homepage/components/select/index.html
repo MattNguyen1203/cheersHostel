@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="homepage__selection">
+      <div class="homepage__selection-header">
+        <span class="homepage__selection-header-res"></span>
+        <img
+          src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/arrowDown.svg"
+          alt=""
+        />
+      </div>
+
+      <ul class="homepage__selection-options"></ul>
+      <span class="homepage__selection-subDes"
+        >You can explore and experience our country in</span
+      >
+      <div class="homepage__selection-date"></div>
+    </div>
+
+    <script>
+      const selectData = [
+        {
+          price: 1000,
+          duration: "3-5 days",
+        },
+        {
+          price: 2000,
+          duration: "4-6 days",
+        },
+        {
+          price: 3000,
+          duration: "5-7 days",
+        },
+      ];
+
+      const hpSelectBtn = document.querySelector(".homepage__selection-header");
+      const hpSelectOption = document.querySelector(
+        ".homepage__selection-options"
+      );
+      const hpSelectRes = document.querySelector(
+        ".homepage__selection-header-res"
+      );
+
+      //get list option
+      let listSelectHTML = "";
+
+      const listSelect = selectData.forEach((item, index) => {
+        listSelectHTML += `<li onclick="handleDuration('${item.duration}','${item.price}' )">$${item.price}</li>`;
+      });
+
+      hpSelectOption.innerHTML = listSelectHTML;
+
+      hpSelectBtn.addEventListener("click", function () {
+        hpSelectOption.classList.toggle("homepage__selection-options-show");
+      });
+
+      //handle duration
+      function handleDuration(dur, price) {
+        const hpSelectDate = document.querySelector(
+          ".homepage__selection-date"
+        );
+        hpSelectDate.innerHTML = dur;
+        hpSelectOption.classList.remove("homepage__selection-options-show");
+        hpSelectRes.innerHTML = `$${price}`;
+      }
+
+      handleDuration(selectData[0].duration, selectData[0].price);
+      document.addEventListener("click", function (e) {
+        if (
+          !hpSelectBtn.contains(e.target) &&
+          !hpSelectOption.contains(e.target)
+        ) {
+          hpSelectOption.classList.remove("homepage__selection-options-show");
+        }
+      });
+    </script>
+  </body>
+</html>

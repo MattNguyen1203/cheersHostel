@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="box1"></div>
+    <div class="homepage__cheers" id="homepage__cheers">
+      <img
+        src="/homepage/asset/scroll/cloudBg.jpg"
+        alt=""
+        class="homepage__cheers-cloud"
+      />
+      <div class="homepage__cheers-sun">
+        <img
+          src="/homepage/asset/scroll/sun.png"
+          alt=""
+          class="homepage__cheers-sun-shadow"
+        />
+        <img
+          src="/homepage/asset/scroll/sunText.png"
+          alt=""
+          class="homepage__cheers-sun-text"
+        />
+
+        <div class="homepage__cheers-sun-logo">
+          <img src="/homepage/asset/scroll/sunLogo.png" alt="" />
+          <div class="homepage__cheers-sun-logo-overlay"></div>
+        </div>
+      </div>
+
+      <div class="homepage__cheers-step1">
+        <img
+          src="/homepage/asset/scroll/img1.png"
+          alt=""
+          class="cheer-img1 cheer-img-left"
+        />
+        <img
+          src="/homepage/asset/scroll/img2.png"
+          alt=""
+          class="cheer-img2 cheer-img-right"
+        />
+        <img
+          src="/homepage/asset/scroll/img3.png"
+          alt=""
+          class="cheer-img3 cheer-img-left"
+        />
+        <img
+          src="/homepage/asset/scroll/img4.png"
+          alt=""
+          class="cheer-img4 cheer-img-right"
+        />
+        <img
+          src="/homepage/asset/scroll/img5.png"
+          alt=""
+          class="cheer-img5 cheer-img-right"
+        />
+        <img
+          src="/homepage/asset/scroll/img6.png"
+          alt=""
+          class="cheer-img6 cheer-img-left"
+        />
+      </div>
+
+      <img
+        class="homepage__cheers-overlay"
+        src="/homepage/asset/scroll/overlay1.png"
+      />
+
+      <div class="btn">Button</div>
+    </div>
+
+    <script>
+      let cheersSection = document.getElementById("homepage__cheers");
+      let imgLeft = document.querySelector(".homepage__cheers-step1");
+      let btn = document.querySelector(".btn");
+
+      window.addEventListener("scroll", function () {
+        let cheersSectionRec = cheersSection.getBoundingClientRect();
+
+        if (cheersSectionRec.top < cheersSection.offsetHeight / 2) {
+          imgLeft.classList.add("homepage__cheers-step1-hidden");
+        }
+      });
+
+      btn.addEventListener("click", function () {
+        imgLeft.classList.remove("homepage__cheers-step1-hidden");
+      });
+    </script>
+  </body>
+</html>

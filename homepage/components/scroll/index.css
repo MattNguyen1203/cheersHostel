@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1vw;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 4.267vw;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.box1 {
+  width: 100vw;
+  height: 100vh;
+  background-color: bisque;
+  margin-bottom: 5rem;
+}
+
+.homepage__cheers {
+  width: 100vw;
+  height: 41rem;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 6.25rem;
+}
+
+.homepage__cheers-overlay {
+  width: 100%;
+  height: 34.0625rem;
+  position: absolute;
+  bottom: 8rem;
+  left: 0;
+  z-index: 10;
+}
+.homepage__cheers-cloud {
+  width: 100%;
+  height: 24.5rem;
+  position: absolute;
+  top: 7rem;
+  left: 0;
+  object-fit: cover;
+}
+
+.homepage__cheers-sun {
+  width: 20.125rem;
+  height: 20.125rem;
+  position: absolute;
+  top: 7rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.homepage__cheers-sun-shadow {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #ff6b00;
+  filter: blur(46.04999923706055px);
+}
+
+.homepage__cheers-sun-text {
+  width: 16.8rem;
+  height: 16.8rem;
+  position: absolute;
+  top: calc((20.125rem - 16.8rem) / 2);
+  left: calc((20.125rem - 16.8rem) / 2);
+
+  z-index: 1;
+  animation: spin 15s linear infinite;
+}
+
+.homepage__cheers-sun-logo {
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.homepage__cheers-sun-logo-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 4px solid #ffe381;
+  border-right: 4px solid #ffe381;
+  transform: rotate(-45deg);
+
+  border-radius: 50%;
+}
+
+.homepage__cheers-sun-logo img {
+  width: 8.48013rem;
+  height: 7.39769rem;
+  object-fit: contain;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.homepage__cheers-step1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  --transition-time: 5s;
+  --img1-width: 65.75356rem;
+  --img1-left: -6rem;
+
+  --img2-width: 68.04219rem;
+  --img2-right: 0;
+}
+
+.homepage__cheers-step1 img {
+  position: absolute;
+  object-fit: contain;
+  transition: all 3s;
+}
+
+.cheer-img1 {
+  width: var(--img1-width);
+  height: 15.60331rem;
+  top: 16rem;
+  left: var(--img1-left);
+  z-index: 9;
+}
+
+.cheer-img2 {
+  width: var(--img2-width);
+  height: 18.35606rem;
+  top: 14rem;
+  right: var(--img2-right);
+  z-index: 10;
+}
+
+.cheer-img3 {
+  width: 45.75006rem;
+  height: 25.84931rem;
+  top: 10rem;
+  left: -21rem;
+  z-index: 20;
+}
+
+.cheer-img4 {
+  width: 28.875rem;
+  height: 37.375rem;
+  top: 0;
+  right: -3rem;
+  z-index: 20;
+}
+
+.cheer-img5 {
+  width: 32.95088rem;
+  height: 21.98994rem;
+  bottom: 5rem;
+  right: 13rem;
+  z-index: 25;
+}
+
+.cheer-img6 {
+  width: 32.94794rem;
+  height: 17.70338rem;
+  transform: rotate(4.774deg);
+  bottom: 4rem;
+  left: 8rem;
+  z-index: 25;
+}
+
+/* btn test */
+
+.btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 1000;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.homepage__cheers-step1-hidden img {
+  /* transition: all 10s ease-in-out; */
+}
+
+.homepage__cheers-step1-hidden .cheer-img1 {
+  animation: transLeft var(--transition-time);
+}
+
+.homepage__cheers-step1-hidden .cheer-img2 {
+  animation: transRight var(--transition-time);
+}
+
+.homepage__cheers-step1-hidden .cheer-img3 {
+  animation: img3Animate var(--transition-time);
+}
+
+.homepage__cheers-step1-hidden .cheer-img4 {
+  animation: img4Animate var(--transition-time);
+}
+
+.homepage__cheers-step1-hidden .cheer-img5 {
+  animation: imgScale 2s linear 1s, img5Animate var(--transition-time);
+}
+
+.homepage__cheers-step1-hidden .cheer-img6 {
+  animation: imgScale 2s linear 1s, img6Animate var(--transition-time);
+}
+
+@keyframes transLeft {
+  to {
+    transform: translateX(-100rem);
+  }
+}
+
+@keyframes transRight {
+  to {
+    transform: translateX(100rem);
+  }
+}
+
+@keyframes img3Animate {
+  to {
+    transform: translateX(-100rem) rotate(-15deg);
+  }
+}
+
+@keyframes img4Animate {
+  to {
+    transform: translateX(100rem) rotate(15deg);
+  }
+}
+
+@keyframes img5Animate {
+  to {
+    transform: translateX(100rem) rotate(30deg);
+  }
+}
+
+@keyframes img6Animate {
+  to {
+    transform: translateX(-100rem) rotate(-30deg);
+  }
+}
+
+@keyframes imgScale {
+  to {
+    width: 1rem;
+    height: 1rem;
+  }
+}

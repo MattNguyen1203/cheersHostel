@@ -1,0 +1,489 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1vw;
+}
+
+/* cheers room header */
+.homepage__cheersRoom-header {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.homepage__cheersRoom-header .homepage__cheersRoom-title {
+  color: #b5461d;
+  text-align: center;
+  font-family: Heavitas;
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 120%;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.homepage__cheersRoom-tabs {
+  display: flex;
+  margin-bottom: 1.25rem;
+}
+
+.homepage__cheersRoom-tabs div {
+  display: flex;
+  height: 2.25rem;
+  padding: 0.625rem 1.25rem;
+  justify-content: center;
+  align-items: center;
+  color: #262626;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 120%;
+  border-radius: 0.5rem;
+  background: #f8f8f8;
+  margin-right: 1rem;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.homepage__cheersRoom-tabs div:hover {
+  background: #ffda54;
+}
+.homepage__cheersRoom-subTitle {
+  color: #6a6a6a;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.00219rem;
+  max-width: 36.8125rem;
+}
+
+/* cheers room content */
+.homepage__cheersRoom-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.homepage__cheersRoom-swiper {
+  width: 87.5rem;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.homepage__cheersRoom-swiper .swiper-slide {
+  position: relative;
+  height: 25.875rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.homepage__cheersRoom-swiper .swiper-slide .swiper-slide-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.homepage__cheersRoom-swiper .swiper-slide .swiper-slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  transition: all 0.5s;
+}
+
+.homepage__cheersRoom-swiper .swiper-slide-overlay {
+  width: 100%;
+  height: 24.875rem;
+  background: linear-gradient(
+    0deg,
+    rgba(12, 12, 12, 0.93) 15.28%,
+    rgba(17, 17, 17, 0) 60.6%
+  );
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+  z-index: 0;
+  transition: all 1s;
+  border-radius: 0.5rem;
+}
+.homepage__cheersRoom-swiper .swiper-slide-content {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 1;
+}
+.homepage__cheersRoom-swiper .swiper-slide-content .room-title {
+  width: fit-content;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 120%;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid white;
+  margin-bottom: 0.75rem;
+}
+
+.homepage__cheersRoom-swiper .swiper-slide-content .room-subContent {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.homepage__cheersRoom-swiper .swiper-slide-content .room-subContent img {
+  width: 1rem;
+  height: 1rem;
+  object-fit: contain;
+  margin-right: 0.38rem;
+}
+
+.homepage__cheersRoom-swiper .swiper-slide-content .room-subContent span {
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.00875rem;
+  margin-right: 0.38rem;
+}
+.homepage__cheersRoom-swiper
+  .swiper-slide-content
+  .room-subContent
+  span:last-child {
+  color: #ececec;
+  font-weight: 500;
+}
+
+.homepage__cheersRoom-swiper .swiper-slide-price {
+  position: absolute;
+  top: -5rem;
+  left: -3rem;
+  width: 13.0625rem;
+  height: 13.0625rem;
+  background-color: rgba(232, 182, 0, 0.9);
+  border-radius: 50%;
+  backdrop-filter: blur(5px);
+  transition: all 0.5s;
+}
+
+.homepage__cheersRoom-swiper .swiper-slide-price-text {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 120%;
+  position: absolute;
+  top: 6.44rem;
+  left: 4.44rem;
+  z-index: 2;
+}
+
+.homepage__cheersRoom-swiper .swiper-slide-price-subtext {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0.0125rem;
+  position: absolute;
+  bottom: 2.87rem;
+  right: 2.25rem;
+}
+.homepage__cheersRoom-swiper .swiper-slide-price-line {
+  width: 5.30331rem;
+  height: 5rem;
+  position: absolute;
+  bottom: 1.87rem;
+  right: 2.25rem;
+}
+
+.homepage__cheersRoom-swiper .swiper-slide-bookBtn {
+  display: flex;
+  width: 7.5625rem;
+  height: 2.75rem;
+  padding: 0.625rem 1.25rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  background: #f8f8f8;
+  color: #262626;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 120%;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 3;
+  transition: all 1s ease;
+  cursor: pointer;
+}
+
+.homepage__cheersRoom-swiper .swiper-slide-detailBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 7.5625rem;
+  height: 2.75rem;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 2;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 120%;
+  opacity: 0;
+  transition: all 1s ease 0.4s;
+  cursor: pointer;
+}
+
+.homepage__cheersRoom-swiper .homepage__cheersRoom-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.64rem 0 1.25rem;
+}
+
+.homepage__cheersRoom-swiper
+  .homepage__cheersRoom-pagination
+  .swiper-pagination-bullet {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #d9d9d9;
+  opacity: 1;
+  margin: 0.44rem;
+  transition: all 0.5s;
+}
+
+.homepage__cheersRoom-swiper
+  .homepage__cheersRoom-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #b5461d;
+}
+
+.homepage__cheersRoom-swiper-btn {
+  width: 2.6875rem;
+  height: 2.1875rem;
+  object-fit: contain;
+  position: absolute;
+  top: 11.93rem;
+  cursor: pointer;
+}
+
+.homepage__cheersRoom-prev {
+  left: 2.31rem;
+}
+
+.homepage__cheersRoom-next {
+  right: 2.31rem;
+}
+
+.homepage__cheersRoom-swiper-btn.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.homepage__cheersRoom-allBtn {
+  margin: auto;
+  display: block;
+  width: fit-content;
+  color: #262626;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 120%;
+  border-bottom: 1px solid black;
+  text-decoration: none;
+}
+
+.arrowPc {
+  display: flex;
+}
+
+.arrowMb {
+  display: none;
+}
+/* cheers room hover, animation */
+
+@media (min-width: 1025px) {
+  .homepage__cheersRoom-swiper .swiper-slide:hover .swiper-slide-price {
+    background-color: rgba(255, 68, 0, 0.75);
+  }
+  .homepage__cheersRoom-swiper .swiper-slide:hover .swiper-slide-bookBtn {
+    transform: translateY(-3.75rem);
+  }
+
+  .homepage__cheersRoom-swiper .swiper-slide:hover .swiper-slide-detailBtn {
+    opacity: 1;
+  }
+
+  .homepage__cheersRoom-swiper .swiper-slide:hover .swiper-slide-overlay {
+    bottom: 0;
+  }
+  .homepage__cheersRoom-swiper .swiper-slide:hover .swiper-slide-img {
+    transform: scale(1.1);
+  }
+}
+
+/* responsive */
+
+@media (max-width: 1024px) {
+  .homepage__cheersRoom-header {
+    width: 100%;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .homepage__cheersRoom-swiper {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .homepage__cheersRoom-swiper .swiper-slide {
+    height: 19.4375rem;
+  }
+
+  .homepage__cheersRoom-header .homepage__cheersRoom-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.31rem;
+  }
+
+  .homepage__cheersRoom-tabs div {
+    height: 2rem;
+    padding: 0.5625rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0.00375rem;
+  }
+
+  .homepage__cheersRoom-tabs div:last-child {
+    margin-right: 0;
+  }
+
+  .homepage__cheersRoom-subTitle {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .homepage__cheersRoom-swiper .swiper-slide-price {
+    width: 8.9375rem;
+    height: 8.9375rem;
+    top: -3rem;
+    left: -3rem;
+  }
+
+  .homepage__cheersRoom-swiper .swiper-slide-price-text {
+    font-size: 1.28444rem;
+    top: 3.5rem;
+    left: 3.5rem;
+  }
+
+  .homepage__cheersRoom-swiper .swiper-slide-price-subtext {
+    font-size: 0.75rem;
+    bottom: 2rem;
+    right: 2rem;
+  }
+
+  .homepage__cheersRoom-swiper .swiper-slide-price-line {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .homepage__cheersRoom-swiper .swiper-slide .swiper-slide-container {
+    height: 15.9375rem;
+  }
+  .homepage__cheersRoom-swiper .swiper-slide-overlay {
+    height: 100%;
+    bottom: 0;
+  }
+
+  .homepage__cheersRoom-swiper .swiper-slide-content {
+    bottom: 0.75rem;
+    left: 0.75rem;
+  }
+
+  .homepage__cheersRoom-swiper .swiper-slide-content .room-title {
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .homepage__cheersRoom-swiper .swiper-slide-content .room-subContent img {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+
+  .homepage__cheersRoom-swiper .swiper-slide-content .room-subContent span {
+    font-size: 0.75rem;
+  }
+
+  .homepage__cheersRoom-swiper .swiper-slide-bookBtn {
+    bottom: 0;
+    left: 0;
+    background: #b5461d;
+    color: #fff;
+    width: calc((100% - 0.75rem) / 2);
+  }
+
+  .homepage__cheersRoom-swiper .swiper-slide-detailBtn {
+    bottom: 0;
+    right: 0;
+    width: calc((100% - 0.75rem) / 2);
+    opacity: 1;
+    flex-direction: row;
+    background: #f8f8f8;
+    color: #262626;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    padding: 0.625rem 1.25rem;
+  }
+
+  .homepage__cheersRoom-swiper .swiper-slide-detailBtn span {
+    margin-right: 0.5rem;
+  }
+
+  .arrowPc {
+    display: none;
+  }
+
+  .arrowMb {
+    display: flex;
+  }
+
+  .homepage__cheersRoom-swiper
+    .homepage__cheersRoom-pagination
+    .swiper-pagination-bullet {
+    width: 0.6875rem;
+    height: 0.25rem;
+    border-radius: 0.3125rem;
+  }
+
+  .homepage__cheersRoom-swiper
+    .homepage__cheersRoom-pagination
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    width: 2.5625rem;
+    background: #ffc800;
+  }
+
+  .homepage__cheersRoom-swiper-btn {
+    display: none;
+  }
+
+  .homepage__cheersRoom-allBtn {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 4.267vw;
+  }
+}

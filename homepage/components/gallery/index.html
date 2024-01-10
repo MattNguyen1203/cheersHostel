@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="homepage__gallery-container">
+      <div class="homepage__gallery-list">
+        <div class="gallery-item">
+          <img src="/homepage/asset/galleryImg.jpg" alt="" />
+          <div class="gallery-item-btn" onclick="handleGallery('experience')">
+            <span>Experience</span>
+            <img src="/homepage/asset/circleDash.svg" alt="" />
+            <div class="gallery-item-btn-overlay"></div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="/homepage/asset/galleryImg.jpg" alt="" />
+          <div class="gallery-item-btn" onclick="handleGallery('hiking')">
+            <span>Hiking</span>
+            <img src="/homepage/asset/circleDash.svg" alt="" />
+            <div class="gallery-item-btn-overlay"></div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="/homepage/asset/galleryImg.jpg" alt="" />
+          <div class="gallery-item-btn" onclick="handleGallery('food')">
+            <span>Food</span>
+            <img src="/homepage/asset/circleDash.svg" alt="" />
+            <div class="gallery-item-btn-overlay"></div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="/homepage/asset/galleryImg.jpg" alt="" />
+          <div class="gallery-item-btn" onclick="handleGallery('people')">
+            <span>People</span>
+            <img src="/homepage/asset/circleDash.svg" alt="" />
+            <div class="gallery-item-btn-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="homepage__gallery-popup-wrapper" id="homepage__gallery-popup">
+      <div class="homepage__gallery-popup-close" onclick="handleCloseGallery()">
+        <img src="/homepage/asset/close.svg" alt="" />
+      </div>
+      <div class="homepage__gallery-popup-container">
+        <div class="gallery-tags">
+          <span onclick="handleGallery('experience')" id="gallery-experience"
+            >Experience</span
+          >
+          <span onclick="handleGallery('hiking')" id="gallery-hiking"
+            >Hiking</span
+          >
+          <span onclick="handleGallery('food')" id="gallery-food">Food</span>
+          <span onclick="handleGallery('people')" id="gallery-people"
+            >People</span
+          >
+        </div>
+
+        <div class="gallery-swiper-cont">
+          <div class="gallery-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="/homepage/asset/galleryItem.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/homepage/asset/galleryItem.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/homepage/asset/galleryItem.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-btn gallery-prev">
+            <img src="/homepage/asset/prev.svg" alt="" />
+          </div>
+          <div class="gallery-btn gallery-next">
+            <img src="/homepage/asset/next.svg" alt="" />
+          </div>
+        </div>
+
+        <div class="gallery-btn-tour">Our Tour</div>
+      </div>
+    </div>
+
+    <div class="homepage__overlay" id="homepage__overlay"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      if (window.innerWidth > 767) {
+        //swiper
+        let gallerySw = new Swiper(".gallery-swiper", {
+          slidesPerView: "auto",
+          spaceBetween: 0,
+          navigation: {
+            nextEl: ".gallery-next",
+            prevEl: ".gallery-prev",
+          },
+
+          breakpoints: {
+            768: {
+              slidesPerView: 1.5,
+              spaceBetween: (window.innerWidth / 100) * 2,
+            },
+            1025: {
+              slidesPerView: 2,
+              spaceBetween: (window.innerWidth / 100) * 1.5,
+            },
+          },
+        });
+      }
+
+      //handle pop up
+
+      const galleryPopup = document.getElementById("homepage__gallery-popup");
+
+      const galleryList = document.querySelectorAll(
+        ".homepage__gallery-container .gallery-item-btn"
+      );
+      const homepageOverlay = document.getElementById("homepage__overlay");
+
+      let galleryTagList = document.querySelectorAll(
+        ".homepage__gallery-popup-container .gallery-tags span"
+      );
+
+      galleryList.forEach((item) => {
+        item.addEventListener("click", function () {
+          handleOpenGallery();
+        });
+      });
+      function handleOpenGallery() {
+        galleryPopup.classList.add("homepage__gallery-popup-wrapper-active");
+        homepageOverlay.style.display = "flex";
+      }
+
+      function handleCloseGallery() {
+        galleryPopup.classList.remove("homepage__gallery-popup-wrapper-active");
+        homepageOverlay.style.display = "none";
+      }
+      function handleGallery(type) {
+        let activeId = `gallery-${type}`;
+
+        galleryTagList.forEach((item) => {
+          if (item.id == activeId) {
+            item.classList.add("gallery-tag-active");
+          } else {
+            item.classList.remove("gallery-tag-active");
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
