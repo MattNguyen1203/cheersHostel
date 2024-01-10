@@ -9,11 +9,6 @@
   <body>
     <div class="box1"></div>
     <div class="homepage__cheers" id="homepage__cheers">
-      <img
-        src="/homepage/asset/scroll/cloudBg.jpg"
-        alt=""
-        class="homepage__cheers-cloud"
-      />
       <div class="homepage__cheers-sun">
         <img
           src="/homepage/asset/scroll/sun.png"
@@ -65,12 +60,59 @@
         />
       </div>
 
+      <div class="homepage__cheers-step2">
+        <img
+          src="/homepage/asset/scroll/img7.png"
+          alt=""
+          class="cheer-img7 cheer-img-left"
+        />
+
+        <img
+          src="/homepage/asset/scroll/img8.png"
+          alt=""
+          class="cheer-img8 cheer-img-left"
+        />
+
+        <img
+          src="/homepage/asset/scroll/img9.png"
+          alt=""
+          class="cheer-img9 cheer-img-left"
+        />
+
+        <img
+          src="/homepage/asset/scroll/img10.png"
+          alt=""
+          class="cheer-img10 cheer-img-left"
+        />
+
+        <img
+          src="/homepage/asset/scroll/img11.png"
+          alt=""
+          class="cheer-img11 cheer-img-right"
+        />
+        <img
+          src="/homepage/asset/scroll/img12.png"
+          alt=""
+          class="cheer-img12 cheer-img-right"
+        />
+        <img
+          src="/homepage/asset/scroll/img13.png"
+          alt=""
+          class="cheer-img13 cheer-img-right"
+        />
+        <img
+          src="/homepage/asset/scroll/img14.png"
+          alt=""
+          class="cheer-img14 cheer-img-right"
+        />
+      </div>
+
       <img
         class="homepage__cheers-overlay"
         src="/homepage/asset/scroll/overlay1.png"
       />
 
-      <div class="btn">Button</div>
+      <div class="homepage__cheers-overlay2"></div>
     </div>
 
     <script>
@@ -82,12 +124,8 @@
         let cheersSectionRec = cheersSection.getBoundingClientRect();
 
         if (cheersSectionRec.top < cheersSection.offsetHeight / 2) {
-          imgLeft.classList.add("homepage__cheers-step1-hidden");
+          cheersSection.classList.add("homepage__cheers-active");
         }
-      });
-
-      btn.addEventListener("click", function () {
-        imgLeft.classList.remove("homepage__cheers-step1-hidden");
       });
     </script>
   </body>
