@@ -234,6 +234,6 @@ handleMsg();
 const submitBtn = document.querySelector(".hostel__detail-form .submit-btn");
 
 submitBtn.addEventListener("click", () => {
-  const name = document.querySelector("#hostel_name input");
-  const phone = document.querySelector("#hostel_phone input");
+  // const name = document.querySelector("#hostel_name input");
+  // const phone = document.querySelector("#hostel_phone input");
 });
