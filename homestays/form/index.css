@@ -1,0 +1,403 @@
+.hostel__detail-form input,
+.hostel__detail-form textarea {
+  border: none;
+  outline: none;
+}
+.hostel__detail-popupForm {
+  border-radius: 1.25rem;
+  background: #fff;
+  width: 74.75rem;
+  padding: 3.75rem 6.25rem 3.6875rem 6.25rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.hostel__detail-form {
+  display: flex;
+  justify-content: space-between;
+}
+.hostel__detail-form .form__left {
+  width: 36.25rem;
+}
+
+.hostel__detail-form .form__right {
+  width: 25rem;
+}
+
+.hostel__detail-form .form__info {
+  display: flex;
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  background: #f8f8f8;
+  margin-bottom: 1.25rem;
+}
+.hostel__detail-form .form__info .form__info-container {
+  display: flex;
+}
+
+.hostel__detail-form .form__info .info-img {
+  width: 7.10394rem;
+  height: 4.9375rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  margin-right: 1.5rem;
+}
+.hostel__detail-form .form__info .info-title {
+  color: #262626;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.0125rem;
+  margin-bottom: 0.25rem;
+}
+
+.hostel__detail-form .form__info .info-price {
+  color: #e7ad0f;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.0125rem;
+  margin-bottom: 0.94rem;
+}
+.hostel__detail-form .form__info .info-tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+.hostel__detail-form .form__info .info-tags-mb {
+  display: none;
+}
+.hostel__detail-form .form__info .info-tags .tag-item {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  height: 1.375rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  margin-right: 0.75rem;
+}
+.hostel__detail-form .form__info .info-tags .tag-item img {
+  width: 0.75rem;
+  height: 0.75rem;
+  object-fit: contain;
+  margin-right: 0.38rem;
+}
+
+.hostel__detail-form .form__info .info-tags .tag-item span {
+  color: #6a6a6a;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0.00375rem;
+}
+.hostel__detail-form .form__group {
+  margin-bottom: 1rem;
+}
+.hostel__detail-form .form-header {
+  color: #262626;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0.00875rem;
+  margin-bottom: 0.75rem;
+}
+.hostel__detail-form .form__group .form-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+.hostel__detail-form .form__group .form-item {
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+.hostel__detail-form .form__group .form-item input,
+.hostel__detail-form .custom-date {
+  width: 100%;
+  height: 2.5625rem;
+  background-color: #f8f8f8;
+  padding: 0.62rem 0.75rem;
+  border-radius: 0.5rem;
+  color: #262626;
+  font-size: 0.875rem;
+  line-height: 150%;
+  letter-spacing: 0.00219rem;
+}
+
+.hostel__detail-form .form__group .form-item input::placeholder {
+  color: #a9a9a9;
+}
+.hostel__detail-form #hostel_checkin input,
+.hostel__detail-form #hostel_checkout input {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+.hostel__detail-form .custom-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hostel__detail-form .custom-date span {
+  color: #a9a9a9;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.00219rem;
+}
+.hostel__detail-form .custom-date img {
+  width: 1.25rem;
+  height: 1.25rem;
+  object-fit: contain;
+}
+.hostel__detail-form .form__sub-container,
+.hostel__detail-form textarea {
+  border-radius: 0.5rem;
+  background: #f8f8f8;
+  padding: 0.75rem;
+  height: 10.25rem;
+  width: 100%;
+}
+
+.hostel__detail-form .form_sub-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+.hostel__detail-form .form_sub-item .label {
+  color: #a9a9a9;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.00219rem;
+}
+.hostel__detail-form .form_sub-item .content {
+  display: flex;
+}
+.hostel__detail-form .form_sub-item .minus,
+.hostel__detail-form .form_sub-item .plus {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+.hostel__detail-form .form_sub-item input {
+  background: transparent;
+  width: 2.25rem;
+  height: 2.25rem;
+  text-align: center;
+  color: #6a6a6a;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0.00875rem;
+}
+
+.hostel__detail-form .form_sub-item input::-webkit-inner-spin-button {
+  display: none;
+}
+.hostel__detail-form .form_sub-total {
+  border-top: 1px solid #f1f1f1;
+  padding-top: 0.75rem;
+}
+
+.hostel__detail-form .form_sub-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hostel__detail-form .form_sub-total .total-header {
+  color: #6a6a6a;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0.00875rem;
+}
+.hostel__detail-form .form_sub-total .qty-total-container {
+  display: flex;
+  width: 6.75rem;
+  height: 2rem;
+  padding: 0.3125rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6.25rem;
+  background: #e8b600;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.00875rem;
+}
+.hostel__detail-form .form_sub-total .qty-total-container .qty-total {
+  margin-right: 0.25rem;
+}
+.hostel__detail-form textarea {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.00219rem;
+}
+.hostel__detail-form .form__right .res-title {
+  color: #262626;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.0125rem;
+  margin-bottom: 0.75rem;
+}
+.hostel__detail-form .form__right .res-container {
+  border-radius: 0.5rem;
+  border: 1px solid #f1e4c3;
+  background: #fff5dc;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.hostel__detail-form .form__right .res-container .overlay {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.hostel__detail-form .form__right .res-container .res-item {
+  display: flex;
+  border-bottom: 1px solid #f1e4c3;
+  position: relative;
+  z-index: 1;
+}
+.hostel__detail-form .form__right .res-header,
+.hostel__detail-form .form__right .res-val {
+  padding: 0.75rem 0.62rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0.0075rem;
+  display: flex;
+}
+.hostel__detail-form .form__right .res-header {
+  border-right: 1px solid #f1e4c3;
+  width: 8.6875rem;
+  font-weight: 500;
+  color: #262626;
+}
+.hostel__detail-form .form__right .res-val {
+  color: #828282;
+}
+.hostel__detail-form .form__right .cat-btn {
+  display: flex;
+  height: 2.75rem;
+  padding: 0.625rem 1.25rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+.hostel__detail-form .form__right .submit-btn,
+.hostel__detail-form .form__right .tel-btn span {
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.hostel__detail-form .form__right .submit-btn {
+  background: #b5461d;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.hostel__detail-form .form__right .tel-btn {
+  background-color: #f0f0f0;
+  text-decoration: none;
+}
+.hostel__detail-form .form__right .tel-btn span {
+  color: #262626;
+}
+.hostel__detail-form .form__right .tel-btn img {
+  width: 1.25rem;
+  height: 1.25rem;
+  object-fit: contain;
+  margin-right: 0.75rem;
+}
+.hostel__detail-popupForm .close-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.hostel__detail-form .form__group .form-item .form-item-msg {
+  font-size: 0.75rem;
+  color: #b5461d;
+  margin-top: 0.5rem;
+}
+@media (max-width: 1024px) {
+  .hostel__detail-popupForm {
+    width: 100%;
+    padding: 4.75rem 1rem 1rem;
+    border-radius: 0;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+  .hostel__detail-form {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .hostel__detail-form .form__left,
+  .hostel__detail-form .form__right {
+    width: 100%;
+    height: max-content;
+  }
+  .hostel__detail-form .form__info {
+    margin-bottom: 1.5rem;
+  }
+  .hostel__detail-form .form__info .info-img {
+    margin-right: 0.75rem;
+  }
+  .hostel__detail-form .form__info .info-title,
+  .hostel__detail-form .form__info .info-price {
+    font-size: 0.875rem;
+  }
+  .hostel__detail-form .form__info .info-tags {
+    display: none;
+  }
+  .hostel__detail-form .form__info .info-tags-mb {
+    display: flex;
+    margin-top: 0.75rem;
+  }
+  .hostel__detail-form .form__info {
+    flex-direction: column;
+  }
+  .hostel__detail-form .form__group .form-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .hostel__detail-form .form__group .form-item {
+    margin-bottom: 0.75rem;
+  }
+  .hostel__detail-form .form-item2 {
+    margin-bottom: 0.75rem;
+  }
+  .hostel__detail-popupForm .close-btn {
+    position: fixed;
+    top: 1.5rem;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+  }
+}

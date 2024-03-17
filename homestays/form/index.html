@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/global.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- pop up form -->
+    <section class="hostel__detail-popupForm">
+      <div class="hostel__detail-form">
+        <div class="form__left">
+          <div class="form__info">
+            <div class="form__info-container">
+              <img
+                src="https://cheers-hostel.okhub-tech.com/wp-content/uploads/2024/03/img-cheer-ha-noi-desc-12.jpg"
+                alt=""
+                class="info-img"
+              />
+              <div class="info-main">
+                <div class="info-title">Dormitory Room ( 6 beds )</div>
+
+                <div class="info-price">$19 / night</div>
+                <div class="info-tags">
+                  <div class="tag-item">
+                    <img
+                      src="https://cheers-hostel.okhub-tech.com/wp-content/uploads/2024/03/SIZE.svg"
+                      alt=""
+                    />
+                    <span>40m2</span>
+                  </div>
+
+                  <div class="tag-item">
+                    <img
+                      src="https://cheers-hostel.okhub-tech.com/wp-content/uploads/2024/03/SIZE.svg"
+                      alt=""
+                    />
+                    <span>x6</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-tags info-tags-mb">
+              <div class="tag-item">
+                <img
+                  src="https://cheers-hostel.okhub-tech.com/wp-content/uploads/2024/03/SIZE.svg"
+                  alt=""
+                />
+                <span>40m2</span>
+              </div>
+
+              <div class="tag-item">
+                <img
+                  src="https://cheers-hostel.okhub-tech.com/wp-content/uploads/2024/03/SIZE.svg"
+                  alt=""
+                />
+                <span>x6</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form__container">
+            <div class="form__group">
+              <div class="form-header">Contact info:</div>
+              <div class="form-list">
+                <div class="form-item" id="hostel_name">
+                  <input
+                    type="text"
+                    name="hostel_name"
+                    placeholder="Full name*"
+                  />
+                  <span class="form-item-msg"></span>
+                </div>
+
+                <div class="form-item" id="hostel_phone">
+                  <input
+                    type="text"
+                    name="hostel_phone"
+                    placeholder="Tel/WhatsApp*"
+                  />
+                  <span class="form-item-msg"></span>
+                </div>
+
+                <div class="form-item" id="hostel_mail">
+                  <input
+                    type="email"
+                    name="hostel_mail"
+                    placeholder="Your email*"
+                  />
+                  <span class="form-item-msg"></span>
+                </div>
+
+                <div class="form-item" id="hostel_nationality">
+                  <input
+                    type="text"
+                    name="hostel_nationality"
+                    placeholder="Nationality*"
+                  />
+                  <span class="form-item-msg"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__group">
+              <div class="form-header">Durations:</div>
+              <div class="form-list">
+                <div class="form-item" id="hostel_checkin">
+                  <input type="date" name="hostel_checkin" />
+                  <div class="custom-date">
+                    <span class="date-res">Check-in</span>
+                    <img
+                      src="https://cheers-hostel.okhub-tech.com/wp-content/uploads/2024/03/Calendar.svg"
+                      alt=""
+                    />
+                  </div>
+                  <span class="form-item-msg"></span>
+                </div>
+
+                <div class="form-item" id="hostel_checkout">
+                  <input type="date" name="hostel_checkout" />
+                  <div class="custom-date">
+                    <span class="date-res">Check-out</span>
+                    <img
+                      src="https://cheers-hostel.okhub-tech.com/wp-content/uploads/2024/03/Calendar.svg"
+                      alt=""
+                    />
+                  </div>
+                  <span class="form-item-msg"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__group">
+              <div class="form-list">
+                <div class="form-item2">
+                  <div class="form-header">Pax:</div>
+
+                  <div class="form__sub-container">
+                    <div class="form_sub-item" id="hostel_qty-adult">
+                      <span class="label">Adults (+12 age)</span>
+                      <div class="content">
+                        <div class="minus">
+                          <img
+                            src="https://cheers-hostel.okhub-tech.com/wp-content/uploads/2024/03/Remove_Minus.svg"
+                            alt=""
+                          />
+                        </div>
+                        <input
+                          type="number"
+                          name="hostel_quantity_adult"
+                          value="0"
+                        />
+                        <div class="plus">
+                          <img
+                            src="https://cheers-hostel.okhub-tech.com/wp-content/uploads/2024/03/Add_Plus.svg"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form_sub-item" id="hostel_qty-child">
+                      <span class="label">Childrens (0-12 age)</span>
+                      <div class="content">
+                        <div class="minus">
+                          <img
+                            src="https://cheers-hostel.okhub-tech.com/wp-content/uploads/2024/03/Remove_Minus.svg"
+                            alt=""
+                          />
+                        </div>
+                        <input
+                          type="number"
+                          name="hostel_quantity_adult"
+                          value="0"
+                        />
+                        <div class="plus">
+                          <img
+                            src="https://cheers-hostel.okhub-tech.com/wp-content/uploads/2024/03/Add_Plus.svg"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form_sub-total">
+                      <span class="total-header">Total:</span>
+                      <div class="qty-total-container">
+                        <span class="qty-total">0</span>
+                        <span>pax</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-item2">
+                  <div class="form-header">Message:</div>
+
+                  <textarea
+                    name="hostel_message"
+                    id="hostel_msg"
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form__right">
+          <div class="res-title">Detailed Information:</div>
+
+          <div class="res-container">
+            <img
+              src="https://cheers-hostel.okhub-tech.com/wp-content/uploads/2024/03/overlay.jpg"
+              alt=""
+              class="overlay"
+            />
+            <div class="res-item" id="hostel-res-name">
+              <div class="res-header">Name</div>
+              <div class="res-val"></div>
+            </div>
+
+            <div class="res-item" id="hostel-res-qty">
+              <div class="res-header">Pax</div>
+              <div class="res-val">
+                <div class="adult" style="margin-right: 5px">
+                  <strong>0</strong>
+                  <span>adults - </span>
+                </div>
+                <div class="children">
+                  <strong>0</strong>
+                  <span>children</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="res-item" id="hostel-res-mail">
+              <div class="res-header">Contact info</div>
+              <div class="res-val"></div>
+            </div>
+
+            <div class="res-item" id="hostel-res-phone">
+              <div class="res-header">Tel/WhatsApp</div>
+              <div class="res-val"></div>
+            </div>
+
+            <div class="res-item" id="hostel-res-nationality">
+              <div class="res-header">Nationality</div>
+              <div class="res-val"></div>
+            </div>
+            <div class="res-item" id="hostel-res-checkin">
+              <div class="res-header">Departure date:</div>
+              <div class="res-val"></div>
+            </div>
+
+            <div class="res-item" id="hostel-res-checkout">
+              <div class="res-header">End date:</div>
+              <div class="res-val"></div>
+            </div>
+
+            <div class="res-item" id="hostel-res-duration">
+              <div class="res-header">Room night</div>
+              <div class="res-val">0 nights</div>
+            </div>
+
+            <div class="res-item" id="hostel-res-type">
+              <div class="res-header">Type of room</div>
+              <div class="res-val">Dormitory Room ( 6 beds )</div>
+            </div>
+
+            <div class="res-item" id="hostel-res-msg">
+              <div class="res-header">Message</div>
+              <div class="res-val"></div>
+            </div>
+          </div>
+
+          <div class="submit-btn cat-btn">SEND REQUEST</div>
+          <a href="tel:04989956" class="tel-btn cat-btn">
+            <img
+              src="https://cheers-hostel.okhub-tech.com/wp-content/uploads/2024/03/WHATSAPP.svg"
+              alt=""
+            />
+            <span>WHATSAPP US</span>
+          </a>
+        </div>
+      </div>
+
+      <img
+        src="https://cheers-hostel.okhub-tech.com/wp-content/uploads/2024/03/Group.svg"
+        alt=""
+        class="close-btn"
+      />
+    </section>
+
+    <!-- end popup form -->
+    <script src="index.js"></script>
+  </body>
+</html>

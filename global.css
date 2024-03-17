@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1vw;
+}
+body {
+  overflow-x: hidden;
+}
+
+.section-container {
+  width: 87.5rem;
+  margin: auto;
+}
+@media (max-width: 767px) {
+  html {
+    font-size: 4.267vw;
+  }
+  .section-container {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 2vw;
+  }
+
+  .section-container {
+    width: 100% !important;
+  }
+}
+@media (min-width: 1800) {
+  html {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.3/build/css/intlTelInput.css"
+    />
+    <link rel="stylesheet" href="/global.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <section class="tourDetail__form formHg section-container">
+      <div class="tourDetail__form-header1 tourDetail__form-header">easy</div>
+      <div class="tourDetail__form-header2 tourDetail__form-header">
+        ONLINE BOOKING
+      </div>
+
+      <div class="tourDetail__form-container">
+        <div class="form-left">
+          <div class="form-quantity">
+            <div class="tourDetail__form-subHeader">Type of tour:</div>
+
+            <div class="form-quantity-container">
+              <div class="item-input">
+                <span class="input-label">
+                  TREKKING - EASY RIDER BASIC BIKE
+                </span>
+
+                <div class="input-main">
+                  <div class="input-price">
+                    $<span class="input-price-val">169</span>
+                  </div>
+                  <div class="input-dec input-btn">-</div>
+                  <input type="number" class="input-quantity" value="00" />
+                  <div class="input-inc input-btn">+</div>
+                </div>
+              </div>
+
+              <div class="item-input">
+                <span class="input-label">
+                  TREKKING - EASY RIDER BASIC BIKE
+                </span>
+
+                <div class="input-main">
+                  <div class="input-price">
+                    $<span class="input-price-val">169</span>
+                  </div>
+                  <div class="input-dec input-btn">-</div>
+                  <input type="number" class="input-quantity" value="00" />
+                  <div class="input-inc input-btn">+</div>
+                </div>
+              </div>
+
+              <div class="input-total">
+                <span class="input-total-header">Total:</span>
+                <div class="input-total-res">$<span>599</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-customerInfo">
+            <div class="tourDetail__form-subHeader">Customer information:</div>
+            <div class="input_name input-item">
+              <input type="text" />
+              <div class="placeholder">
+                Name <span class="required">*</span>
+              </div>
+            </div>
+
+            <div class="input_mail input-item">
+              <input type="mail" />
+              <div class="placeholder">
+                Mail <span class="required">*</span>
+              </div>
+            </div>
+
+            <div class="input_phone input-item">
+              <input type="text" />
+              <div class="placeholder">
+                (Phone/Whatsapp) <span class="required">*</span>
+              </div>
+            </div>
+
+            <textarea
+              placeholder="Message"
+              class="input_msg input-item"
+            ></textarea>
+          </div>
+        </div>
+        <div class="form-right"></div>
+      </div>
+    </section>
+
+    <!-- <input id="phone" placeholder="(Phone/Whatsapp) *" /> -->
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.3/build/js/intlTelInput.min.js"></script>
+    <script src="index.js"></script>
+
+    <script>
+      //   const input = document.querySelector("#phone");
+      //   window.intlTelInput(input, {
+      //     utilsScript:
+      //       "https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.3/build/js/utils.js",
+      //     initialCountry: "vn",
+      //     showSelectedDialCode: true,
+      //   });
+    </script>
+  </body>
+</html>

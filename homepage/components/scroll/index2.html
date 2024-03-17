@@ -120,56 +120,45 @@
     <div class="box1"></div>
     <div class="box1"></div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
     <script>
       let cheersSection = document.getElementById("homepage__cheers");
       let imgLeft = document.querySelector(".homepage__cheers-step1");
       let btn = document.querySelector(".btn");
 
-      window.addEventListener("scroll", function () {
-        let cheersSectionRec = cheersSection.getBoundingClientRect();
+      // if (window.innerWidth > 1024) {
+      ScrollTrigger.create({
+        trigger: ".homepage__cheers",
+        start: "bottom bottom",
+        // 		  markers:true,
+        once: true,
+        onEnter: () => {
+          cheersSection.scrollIntoView({ behavior: "smooth" });
+          cheersSection.classList.add("homepage__cheers-active");
 
-        if (window.innerWidth > 1024) {
-          if (
-            cheersSectionRec.top < cheersSection.offsetHeight / 2 &&
-            cheersSectionRec.top > 0
-          ) {
-            cheersSection.classList.add("homepage__cheers-active1");
-          } else if (cheersSectionRec.top < 0 && cheersSectionRec.top > -20) {
+          if (window.innerWidth > 1024) {
             disableEleScroll();
-
-            setTimeout(() => {
-              enableEleScroll();
-            }, [6000]);
-
-            setTimeout(() => {
-              cheersSection.classList.add("homepage__cheers-active");
-            }, [4000]);
           }
-        } else {
-          if (
-            cheersSectionRec.top < cheersSection.offsetHeight / 2 &&
-            cheersSectionRec.top > 0
-          ) {
-            cheersSection.classList.add("homepage__cheers-active");
-          }
-        }
+
+          setTimeout(() => {
+            cheersSection.classList.add("homepage__cheers-active-2");
+          }, 2500);
+          setTimeout(() => {
+            cheersSection.classList.add("homepage__cheers-active-auto");
+            enableEleScroll();
+          }, 5000);
+        },
       });
+      // }
 
       function disableEleScroll() {
         // Get the current page scroll position
-        document.querySelector("body").classList.add("stop-scrolling");
-        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        (scrollLeft =
-          window.pageXOffset || document.documentElement.scrollLeft),
-          // if any scroll is attempted, set this to the previous value
-          (window.onscroll = function () {
-            window.scrollTo(scrollLeft, scrollTop);
-          });
+        document.querySelector("html").classList.add("stop-scrolling");
       }
 
       function enableEleScroll() {
-        document.querySelector("body").classList.remove("stop-scrolling");
-        window.onscroll = function () {};
+        document.querySelector("html").classList.remove("stop-scrolling");
       }
     </script>
   </body>

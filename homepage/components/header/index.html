@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="header__wrapper">
+      <a href="/" class="header-logo">
+        <img
+          src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/headerLogo.svg"
+          alt="cheers hostel logo"
+        />
+      </a>
+
+      <!-- menu pc -->
+      <div class="header__container">
+        <div class="header-item">
+          <a href="/" class="header-item-text">About Us</a>
+        </div>
+
+        <div class="header-item header-item-hostel">
+          <a href="/" class="header-item-text">Hostel</a>
+          <img
+            src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/headerArr.svg"
+            alt=""
+            class="header-item-arrow"
+          />
+
+          <div class="header-item-popup">
+            <div class="header-item-popup-wrapper">
+              <img
+                src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/headerArrUp.svg"
+                alt=""
+                class="header-item-popup-subImg"
+              />
+
+              <div class="header-item-popup-container">
+                <div class="content">
+                  <div class="content-main">
+                    <div
+                      class="content-item"
+                      onmouseenter="handleMainImg('<?php echo get_stylesheet_directory_uri() ?>/asset/images/bg1.jpg', 'header-item-hostel')"
+                    >
+                      Cheers hostel ha noi
+                    </div>
+                    <div
+                      class="content-item"
+                      onmouseenter="handleMainImg('<?php echo get_stylesheet_directory_uri() ?>/asset/images/bg2.jpg', 'header-item-hostel')"
+                    >
+                      Cheers Du Gia Village
+                    </div>
+                  </div>
+
+                  <a href="/" class="content-btn">
+                    <img
+                      src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/arrRight.svg"
+                      alt=""
+                    />
+                    <span>See all</span>
+                  </a>
+                </div>
+
+                <div class="gallery">
+                  <img
+                    src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/bg1.jpg"
+                    alt="cheers hostel"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-item header-item-tour">
+          <a href="/" class="header-item-text">Tour</a>
+          <img
+            src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/headerArr.svg"
+            alt=""
+            class="header-item-arrow"
+          />
+
+          <div class="header-item-popup">
+            <div class="header-item-popup-wrapper">
+              <img
+                src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/headerArrUp.svg"
+                alt=""
+                class="header-item-popup-subImg"
+              />
+
+              <div class="header-item-popup-container">
+                <div class="content">
+                  <div class="content-main">
+                    <div
+                      class="content-item"
+                      onmouseenter="handleMainImg('<?php echo get_stylesheet_directory_uri() ?>/asset/images/bg2.jpg', 'header-item-tour')"
+                    >
+                      <img
+                        src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/moto.svg"
+                        alt=""
+                      />
+                      <span>motorbike tour</span>
+                    </div>
+                    <div
+                      class="content-item"
+                      onmouseenter="handleMainImg('<?php echo get_stylesheet_directory_uri() ?>/asset/images/bg1.jpg', 'header-item-tour')"
+                    >
+                      <img
+                        src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/cruise.svg"
+                        alt=""
+                      />
+                      <span>Cruise tour</span>
+                    </div>
+
+                    <div
+                      class="content-item"
+                      onmouseenter="handleMainImg('<?php echo get_stylesheet_directory_uri() ?>/asset/images/bg3.jpg', 'header-item-tour')"
+                    >
+                      <img
+                        src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/treking.svg"
+                        alt=""
+                      />
+                      <span>trekking tour</span>
+                    </div>
+
+                    <div
+                      class="content-item"
+                      onmouseenter="handleMainImg('<?php echo get_stylesheet_directory_uri() ?>/asset/images/bg2.jpg', 'header-item-tour')"
+                    >
+                      <img
+                        src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/jeep.svg"
+                        alt=""
+                      />
+                      <span>jeep tour</span>
+                    </div>
+
+                    <div
+                      class="content-item"
+                      onmouseenter="handleMainImg('<?php echo get_stylesheet_directory_uri() ?>/asset/images/bg1.jpg', 'header-item-tour')"
+                    >
+                      <img
+                        src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/walking.svg"
+                        alt=""
+                      />
+                      <span>walking tour</span>
+                    </div>
+
+                    <div
+                      class="content-item"
+                      onmouseenter="handleMainImg('<?php echo get_stylesheet_directory_uri() ?>/asset/images/bg3.jpg', 'header-item-tour')"
+                    >
+                      <img
+                        src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/cave.svg"
+                        alt=""
+                      />
+                      <span>cave tour</span>
+                    </div>
+                  </div>
+
+                  <a href="/" class="content-btn">
+                    <img
+                      src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/arrRight.svg"
+                      alt=""
+                    />
+                    <span>See all</span>
+                  </a>
+                </div>
+
+                <div class="gallery">
+                  <img
+                    src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/bg2.jpg"
+                    alt="cheers hostel"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-item header-item-destination">
+          <a href="/" class="header-item-text">Travel Destination</a>
+          <img
+            src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/headerArr.svg"
+            alt=""
+            class="header-item-arrow"
+          />
+
+          <div class="header-item-popup">
+            <div class="header-item-popup-wrapper">
+              <img
+                src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/headerArrUp.svg"
+                alt=""
+                class="header-item-popup-subImg"
+              />
+
+              <div class="header-item-popup-container">
+                <div class="content">
+                  <div class="content-main">
+                    <div
+                      class="content-item"
+                      onmouseenter="handleMainImg('<?php echo get_stylesheet_directory_uri() ?>/asset/images/bg3.jpg', 'header-item-destination')"
+                    >
+                      Ha Giang
+                    </div>
+                    <div
+                      class="content-item"
+                      onmouseenter="handleMainImg('<?php echo get_stylesheet_directory_uri() ?>/asset/images/bg2.jpg', 'header-item-destination')"
+                    >
+                      cao bang
+                    </div>
+                    <div
+                      class="content-item"
+                      onmouseenter="handleMainImg('<?php echo get_stylesheet_directory_uri() ?>/asset/images/bg1.jpg', 'header-item-destination')"
+                    >
+                      Sa Pa
+                    </div>
+                    <div
+                      class="content-item"
+                      onmouseenter="handleMainImg('<?php echo get_stylesheet_directory_uri() ?>/asset/images/bg2.jpg', 'header-item-destination')"
+                    >
+                      Ha Long
+                    </div>
+                    <div
+                      class="content-item"
+                      onmouseenter="handleMainImg('<?php echo get_stylesheet_directory_uri() ?>/asset/images/bg3.jpg', 'header-item-destination')"
+                    >
+                      Ninh Binh
+                    </div>
+                    <div
+                      class="content-item"
+                      onmouseenter="handleMainImg('<?php echo get_stylesheet_directory_uri() ?>/asset/images/bg1.jpg', 'header-item-destination')"
+                    >
+                      Pu luong
+                    </div>
+                  </div>
+
+                  <a href="/" class="content-btn">
+                    <img
+                      src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/arrRight.svg"
+                      alt=""
+                    />
+                    <span>See all</span>
+                  </a>
+                </div>
+
+                <div class="gallery">
+                  <img
+                    src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/bg3.jpg"
+                    alt="cheers hostel"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-item">
+          <a href="/" class="header-item-text">HANOI IN MY EYES</a>
+        </div>
+
+        <div class="header-item">
+          <a href="/" class="header-item-text">FAQS</a>
+        </div>
+
+        <div class="header-item">
+          <a href="/" class="header-item-text">BLOG</a>
+        </div>
+
+        <div class="header-item">
+          <a href="/" class="header-item-text">CONTACT</a>
+        </div>
+
+        <div class="header-item header-item-search">
+          <img
+            src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/search.svg"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <img
+        src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/hamburger.svg"
+        alt=""
+        class="header-menu-icon"
+        id="header-menu-icon"
+      />
+
+      <!-- nav mobile -->
+
+      <div class="header__nav" id="header__nav">
+        <img
+          src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/headerX.svg"
+          alt=""
+          class="header__nav-close"
+        />
+
+        <div class="header__nav-container">
+          <div class="header__nav-item">
+            <a href="/" class="header__nav-item-header">Home</a>
+          </div>
+
+          <div class="header__nav-item">
+            <a href="/about-us" class="header__nav-item-header">ABOUT US</a>
+          </div>
+
+          <div class="header__nav-item header__nav-hostel">
+            <div class="header__nav-item-header">
+              <a href="/hostel">hostel</a>
+              <img
+                src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/caret.svg"
+                alt=""
+              />
+            </div>
+
+            <div class="header__nav-item-content">
+              <a href="/" class="content-item">Cheers hostel ha noi</a>
+              <a href="/" class="content-item">Cheers Du Gia Village</a>
+            </div>
+          </div>
+
+          <div class="header__nav-item header__nav-tour">
+            <div class="header__nav-item-header">
+              <a href="/hostel">Tour</a>
+              <img
+                src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/caret.svg"
+                alt=""
+              />
+            </div>
+
+            <div class="header__nav-item-content">
+              <a href="/" class="content-item">
+                <img
+                  src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/moto.svg"
+                  alt=""
+                />
+                <span>motorbike tour</span>
+              </a>
+              <a href="/" class="content-item">
+                <img
+                  src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/cruise.svg"
+                  alt=""
+                />
+                <span>Cruise tour</span>
+              </a>
+
+              <a href="/" class="content-item">
+                <img
+                  src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/treking.svg"
+                  alt=""
+                />
+                <span>trekking tour</span>
+              </a>
+
+              <a href="/" class="content-item">
+                <img
+                  src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/jeep.svg"
+                  alt=""
+                />
+                <span>jeep tour</span>
+              </a>
+              <a href="/" class="content-item">
+                <img
+                  src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/walking.svg"
+                  alt=""
+                />
+                <span>walking tour</span>
+              </a>
+              <a href="/" class="content-item">
+                <img
+                  src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/cave.svg"
+                  alt=""
+                />
+                <span>cave tour</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="header__nav-item">
+            <a href="/destination" class="header__nav-item-header"
+              >Travel Destination</a
+            >
+          </div>
+
+          <div class="header__nav-item">
+            <a href="/about-us" class="header__nav-item-header">
+              HANOI IN MY EYES
+            </a>
+          </div>
+
+          <div class="header__nav-item">
+            <a href="/about-us" class="header__nav-item-header"> FAQS </a>
+          </div>
+
+          <div class="header__nav-item">
+            <a href="/about-us" class="header__nav-item-header"> BLOG </a>
+          </div>
+
+          <div class="header__nav-item">
+            <a href="/about-us" class="header__nav-item-header"> CONTACT </a>
+          </div>
+
+          <div class="header__nav-social">
+            <a href="/" class="header__nav-social-item">
+              <img
+                src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/facebookIcon.svg"
+                alt=""
+              />
+            </a>
+
+            <a href="/" class="header__nav-social-item">
+              <img
+                src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/youtubeIcon.svg"
+                alt=""
+              />
+            </a>
+
+            <a href="/" class="header__nav-social-item">
+              <img
+                src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/tiktokIcon.svg"
+                alt=""
+              />
+            </a>
+          </div>
+
+          <div class="header__nav-contact">
+            <div class="header__nav-contact-item">
+              <img
+                src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/homeIcon.svg"
+                alt=""
+              />
+              <span>5 Au Trieu, Hoan Kiem, Ha Noi</span>
+            </div>
+
+            <div class="header__nav-contact-item">
+              <img
+                src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/webIcon.svg"
+                alt=""
+              />
+              <span>www.vietnamcheershostel.com</span>
+            </div>
+
+            <div class="header__nav-contact-item">
+              <img
+                src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/phoneIcon.svg"
+                alt=""
+              />
+              <span>
+                <p>+84 98 3333 986 (Miss. Linette)</p>
+                <p>+84 989 655 995 (Mr. Chinh)</p>
+              </span>
+            </div>
+
+            <div class="header__nav-contact-item">
+              <img
+                src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/mailIcon.svg"
+                alt=""
+              />
+              <span>@cheershoster1@gmail.com</span>
+            </div>
+          </div>
+
+          <div class="header__nav-bg">
+            <img
+              src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/navBg.jpg"
+              alt=""
+              class="header__nav-bg-img"
+            />
+            <img
+              src="<?php echo get_stylesheet_directory_uri() ?>/asset/images/navOverlay.png"
+              alt=""
+              class="header__nav-bg-overlay"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function handleMainImg(src, imgWrapperCls) {
+        const mainImg = document.querySelector(
+          `.${imgWrapperCls} .gallery img`
+        );
+
+        mainImg.src = src;
+      }
+
+      const navIconList = document.querySelectorAll(
+        ".header__nav .header__nav-item-header img"
+      );
+
+      const navContents = document.querySelectorAll(
+        ".header__nav .header__nav-item-content"
+      );
+
+      navIconList.forEach((item, index) => {
+        item.addEventListener("click", function () {
+          const content = navContents[index];
+
+          // Toggle content visibility
+          if (content.style.height === "0px" || !content.style.height) {
+            // If the height is zero or not set, open the content
+            content.style.height = `calc(${
+              content.scrollHeight + "px"
+            } + 1.25rem)`;
+            content.style.paddingTop = "1.25rem";
+            item.style.transform = "rotate(180deg)";
+          } else {
+            // If the height is not zero, close the content
+            content.style.height = "0";
+            content.style.paddingTop = "0";
+            item.style.transform = "rotate(0deg)";
+          }
+        });
+      });
+
+      const navIcon = document.getElementById("header-menu-icon");
+      const headerNav = document.getElementById("header__nav");
+      const closeIcon = document.querySelector(".header__nav-close");
+
+      navIcon.addEventListener("click", function () {
+        headerNav.classList.add("header__nav-active");
+      });
+
+      closeIcon.addEventListener("click", function () {
+        headerNav.classList.remove("header__nav-active");
+      });
+    </script>
+  </body>
+</html>

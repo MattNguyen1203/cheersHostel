@@ -1,0 +1,54 @@
+.common-banner {
+  height: 33.5rem;
+  width: 100%;
+  position: relative;
+}
+
+.common-banner .mainImg {
+  width: 100%;
+  height: 26.88rem;
+}
+
+.overlaySw {
+  width: 100%;
+  position: absolute;
+  bottom: 4rem;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.overlaySw img {
+  width: 100%;
+  height: 100%;
+}
+.overlaySw .swiper-wrapper {
+  transition-timing-function: linear;
+}
+
+.common-banner .banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 31rem;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.0125rem;
+}
+
+@media (max-width: 1024px) {
+  .common-banner {
+    width: 100%;
+    height: 11.8125rem;
+  }
+  .common-banner .banner-text {
+    width: 100%;
+  }
+  .common-banner .mainImg {
+    height: 100%;
+  }
+}
